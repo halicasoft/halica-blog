@@ -1,43 +1,67 @@
-# Astro Starter Kit: Minimal
+![Zaggonaut, a retro-inspired theme for Astro.](./images/README.png)
 
-```sh
-npm create astro@latest -- --template minimal
+Zaggonaut is a retro-inspired black & white theme for Astro, built using TypeScript, TailwindCSS, and of course, Astro.
+
+> [!NOTE]  
+> Introducing Zaggonaut 2.0!
+> This is a complete rewrite of the internal content layer, making use of Astro's new Content Collections feature, among other enhancements.
+
+If you are looking for the original Zaggonaut theme, you can find it [on the v1 branch](https://github.com/RATIU5/zaggonaut/tree/v1).
+
+## Getting Started
+
+[View the demo](https://zaggonaut.dev) or [view the source code](https://github.com/RATIU5/zaggonaut).
+
+Alternatively, you can create a new Astro project with Zaggonaut like this:
+
+```bash
+# pnpm
+pnpm create astro@latest --template RATIU5/zaggonaut
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+> [!IMPORTANT]  
+> Currently, `pnpm` is the only supported package manager due to `pnpm` throwing peer-dependency conflicts.
 
-## 🚀 Project Structure
+## Features
 
-Inside of your Astro project, you'll see the following folders and files:
+- Content Collections
+- Dark & light mode
+- Customizable colors
+- 100 / 100 Lighthouse score
+- Fully accessible
+- Fully responsive
+- Type-safe
+- SEO-friendly
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+## Customization
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+The entire theme is fully customizable. The theme is setup a specific way to make it easy to customize.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+### Colors
 
-Any static assets, like images, can be placed in the `public/` directory.
+You can customize the colors of the theme by editing the `src/styles/global.css` file.
+This file uses Tailwind CSS and CSS variables to customize the colors of the theme.
+Zaggonaut uses the following CSS variables:
 
-## 🧞 Commands
+- `--color-zag-dark`: The dark color of the theme
+- `--color-zag-light`: The light color of the theme
+- `--color-zag-dark-muted`: The dark color of the theme with a slight opacity
+- `--color-zag-light-muted`: The light color of the theme with a slight opacity
+- `--color-zag-accent-light`: The light accent color of the theme
+- `--color-zag-accent-light-muted`: The light accent color of the theme with a slight opacity
+- `--color-zag-accent-dark`: The dark accent color of the theme
+- `--color-zag-accent-dark-muted`: The dark accent color of the theme with a slight opacity
 
-All commands are run from the root of the project, from a terminal:
+### Content Customization
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+95% of the content you'll want to customize will be located inside the `content` directory. Let's break down the specific files/directories you may want to edit:
 
-## 👀 Want to learn more?
+- `content/configuration.toml`: This file contains the site configuration, such as metadata, social links, and text content.
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- `content/blogs/`: This directory contains your blog posts. Each post is a Markdown file with metadata in the frontmatter at the top.
+
+- `content/projects/`: This directory contains your projects. Each project is a Markdown file also with metadata in the frontmatter.
+
+## Ready To Try?
+
+Check out [the theme website](https://zaggonaut.dev) to give it a spin!
